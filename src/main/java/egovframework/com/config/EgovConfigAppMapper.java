@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.support.lob.DefaultLobHandler;
 
@@ -72,9 +74,19 @@ public class EgovConfigAppMapper {
 				.getResource("classpath:/egovframework/mapper/config/mapper-config.xml"));
 
 		try {
-			sqlSessionFactoryBean.setMapperLocations(
-				pathMatchingResourcePatternResolver
-					.getResources("classpath:/egovframework/mapper/let/**/*_" + dbType + ".xml"));
+			// 1. 기존 eGovFrame 매퍼 경로 로드
+			Resource[] egovMappers = pathMatchingResourcePatternResolver
+					.getResources("classpath:/egovframework/mapper/let/**/*_" + dbType + ".xml");
+
+			// 2. 우리가 추가한 매퍼 경로 로드
+			Resource[] customMappers = pathMatchingResourcePatternResolver
+					.getResources("classpath:/mappers/**/*.xml");
+
+			// 3. 두 경로의 리소스 배열을 하나로 합치기
+			Resource[] totalMappers = ArrayUtils.addAll(egovMappers, customMappers);
+
+			// 4. 합친 배열을 최종 매퍼 위치로 설정
+			sqlSessionFactoryBean.setMapperLocations(totalMappers);
 		} catch (IOException e) {
 			// TODO Exception 처리 필요
 		}

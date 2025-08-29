@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.com.mapper.BoardMapper">
+
+    <select id="selectBoardList" resultType="egovframework.com.domain.Board">
+        SELECT
+            board_id,
+            title,
+            writer,
+            created_at
+        FROM TBL_BOARD
+        ORDER BY board_id DESC
+    </select>
+
+    <select id="selectBoardDetail" parameterType="long" resultType="egovframework.com.domain.Board">
+        SELECT
+            board_id,
+            title,
+            content,
+            writer,
+            created_at
+        FROM TBL_BOARD
+        WHERE board_id = #{boardId}
+    </select>
+
+    <insert id="insertBoard" parameterType="egovframework.com.domain.Board">
+        INSERT INTO TBL_BOARD (title, content, writer)
+        VALUES (#{title}, #{content}, #{writer})
+    </insert>
+
+    <update id="updateBoard" parameterType="egovframework.com.domain.Board">
+        UPDATE TBL_BOARD
+        SET
+            title = #{title},
+            content = #{content}
+        WHERE board_id = #{boardId}
+    </update>
+
+    <delete id="deleteBoard" parameterType="long">
+        DELETE FROM TBL_BOARD
+        WHERE board_id = #{boardId}
+    </delete>
+
+</mapper>
