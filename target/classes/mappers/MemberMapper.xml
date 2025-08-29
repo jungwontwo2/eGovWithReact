@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.com.mapper.MemberMapper">
+
+    <resultMap id ="memberResultMap" type="egovframework.com.domain.Member">
+        <id property="memberId" column="member_id"/>
+        <result property="password" column="password"/>
+        <result property="memberName" column="member_name"/>
+        <result property="role" column="role"/>
+    </resultMap>
+
+    <select id="findByMemberId" parameterType="string" resultMap="memberResultMap">
+        SELECT
+            member_id,
+            password,
+            member_name,
+            role
+        FROM TBL_MEMBER
+        WHERE member_id = #{memberId}
+    </select>
+
+</mapper>
