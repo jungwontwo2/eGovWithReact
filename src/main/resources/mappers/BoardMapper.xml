@@ -16,6 +16,12 @@
             writer,
             created_at
         FROM TBL_BOARD
+        <where>
+            <if test="searchKeyword != null and searchKeyword !=''">
+                title LIKE CONCAT('%', #{searchKeyword}, '%')
+                OR content LIKE CONCAT('%', #{searchKeyword}, '%')
+            </if>
+        </where>
         ORDER BY board_id DESC
         LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
     </select>
@@ -23,6 +29,12 @@
     <select id="selectBoardListTotCnt" parameterType="egovframework.com.cmm.ComDefaultVO">
         SELECT COUNT(*)
         FROM TBL_BOARD
+        <where>
+            <if test="searchKeyword != null and searchKeyword !=''">
+                title LIKE CONCAT('%', #{searchKeyword}, '%')
+                OR content LIKE CONCAT('%', #{searchKeyword}, '%')
+            </if>
+        </where>
     </select>
 
     <select id="selectBoardDetail" parameterType="long" resultType="egovframework.com.domain.Board" resultMap="boardResultMap">

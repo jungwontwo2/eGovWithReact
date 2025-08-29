@@ -55,3 +55,20 @@ Accept: application/json
 # 예상 결과: list에 마지막 2개 (3번, 2번 게시글)
 GET http://localhost:8082/api/boards?pageIndex=3&pageUnit=5
 Accept: application/json
+
+### 1. '제목 1' 이라는 키워드로 검색
+# 예상 결과: list에 "제목 1", "제목 10", "제목 11", "제목 12"가 포함된 4개의 게시글이 검색됨
+GET http://localhost:8082/api/boards?searchKeyword=제목 1
+Accept: application/json
+
+
+### 2. '내용' 이라는 키워드로 검색하고, 2페이지 보기 (페이지당 5개)
+# 예상 결과: list에 5개 (7번~3번 게시글), pagination의 totalCount는 12
+GET http://localhost:8082/api/boards?searchKeyword=내용&pageUnit=5&pageIndex=2
+Accept: application/json
+
+
+### 3. 검색 결과가 없는 경우
+# 예상 결과: list는 [], pagination의 totalCount는 0
+GET http://localhost:8082/api/boards?searchKeyword=결과없음
+Accept: application/json

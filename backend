@@ -6969,3 +6969,372 @@ This generated password is for development use only. Your security configuration
 2025-08-29 13:50:16.591  INFO 29564 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
 2025-08-29 13:50:16.591  INFO 29564 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
 2025-08-29 13:50:16.591  INFO 29564 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:42:34.859  INFO 29564 --- [SpringApplicationShutdownHook] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:34.860  INFO 29564 --- [SpringApplicationShutdownHook] j.connection                             : 2. Connection closed
+2025-08-29 14:42:34.860  INFO 29564 --- [SpringApplicationShutdownHook] j.audit                                  : 2. Connection.close() returned 
+2025-08-29 14:42:36.750  INFO 19512 --- [restartedMain] e.EgovBootApplication                    : Starting EgovBootApplication using Java 21.0.7 on DESKTOP150 with PID 19512 (C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy\target\classes started by gonet in C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy)
+2025-08-29 14:42:36.755  INFO 19512 --- [restartedMain] e.EgovBootApplication                    : The following 1 profile is active: "dev"
+2025-08-29 14:42:36.787  INFO 19512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29 14:42:36.787  INFO 19512 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29 14:42:38.108  INFO 19512 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8082 (http)
+2025-08-29 14:42:38.279  INFO 19512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1490 ms
+2025-08-29 14:42:38.529  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.638  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.738  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.751  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.757  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.763  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.768  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.774  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.781  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.797  INFO 19512 --- [restartedMain] o.s.v.c.DefaultValidatorFactory          : Loading validation configurations from [class path resource [egovframework/validator/validator-rules-let.xml],file [C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy\target\classes\egovframework\validator\let\cop\bbs\EgovBdMstrRegist.xml],file [C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy\target\classes\egovframework\validator\let\cop\bbs\EgovNoticeRegist.xml],file [C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy\target\classes\egovframework\validator\let\cop\com\EgovCopComManage.xml],file [C:\eGovFrameDev-4.3.0-64bit\workspace-egov\eGovSpringBootStdy\target\classes\egovframework\validator\let\cop\smt\sim\EgovIndvdlSchdulManage.xml]]
+2025-08-29 14:42:38.867  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.877  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.886  INFO 19512 --- [restartedMain] o.s.a.f.CglibAopProxy                    : Unable to proxy interface-implementing method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2025-08-29 14:42:38.983  WARN 19512 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 49e00a75-256d-41f9-84c9-fd7e5a80474d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-08-29 14:42:39.064  INFO 19512 --- [restartedMain] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f82acfd, org.springframework.web.filter.CharacterEncodingFilter@33d02f67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18c3ff70, org.springframework.security.web.context.SecurityContextPersistenceFilter@48641f53, org.springframework.security.web.header.HeaderWriterFilter@dd7a40e, org.springframework.web.filter.CorsFilter@1c8a4458, org.springframework.web.multipart.support.MultipartFilter@9def704, org.springframework.security.web.authentication.logout.LogoutFilter@18f18799, egovframework.com.jwt.JwtAuthenticationFilter@6985e1aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6445f313, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13187daf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@428b45b, org.springframework.security.web.session.SessionManagementFilter@68f33125, org.springframework.security.web.access.ExceptionTranslationFilter@5e8a8010, org.springframework.security.web.access.intercept.AuthorizationFilter@5a6257d3]
+2025-08-29 14:42:39.247  INFO 19512 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-29 14:42:39.535  INFO 19512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29 14:42:39.567  INFO 19512 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8082 (http) with context path ''
+2025-08-29 14:42:39.574  INFO 19512 --- [restartedMain] e.EgovBootApplication                    : Started EgovBootApplication in 3.12 seconds (JVM running for 3.899)
+2025-08-29 14:42:52.546  INFO 19512 --- [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-29 14:42:52.548  INFO 19512 --- [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2025-08-29 14:42:52.787  INFO 19512 --- [http-nio-8082-exec-1] j.connection                             : 1. Connection opened
+2025-08-29 14:42:52.788  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.new Connection returned 
+2025-08-29 14:42:52.788  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.isClosed() returned false
+2025-08-29 14:42:52.792  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.isClosed() returned false
+2025-08-29 14:42:52.792  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.isClosed() returned false
+2025-08-29 14:42:52.792  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.isValid(0) returned true
+2025-08-29 14:42:52.792  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.getAutoCommit() returned true
+2025-08-29 14:42:52.792  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.clearWarnings() returned 
+2025-08-29 14:42:52.793  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.isClosed() returned false
+2025-08-29 14:42:52.794  INFO 19512 --- [http-nio-8082-exec-1] j.connection                             : 1. Connection closed
+2025-08-29 14:42:52.794  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 1. Connection.close() returned 
+2025-08-29 14:42:52.810  INFO 19512 --- [http-nio-8082-exec-1] j.connection                             : 2. Connection opened
+2025-08-29 14:42:52.810  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.new Connection returned 
+2025-08-29 14:42:52.810  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.810  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.811  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.811  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:42:52.813  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:42:52.813  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:42:52.813  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:42:52.850  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:42:52.850  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.prepareStatement(SELECT COUNT(*)
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%')) returned net.sf.log4jdbc.PreparedStatementSpy@c934640
+2025-08-29 14:42:52.850  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setString(1, "제목 1") returned 
+2025-08-29 14:42:52.850  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setString(2, "제목 1") returned 
+2025-08-29 14:42:52.850  INFO 19512 --- [http-nio-8082-exec-1] j.sqlonly                                : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '제목 1', '%') OR content LIKE CONCAT('%', 
+'제목 1', '%') 
+
+2025-08-29 14:42:52.858  INFO 19512 --- [http-nio-8082-exec-1] j.sqltiming                              : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '제목 1', '%') OR content LIKE CONCAT('%', 
+'제목 1', '%') 
+ {executed in 8 msec}
+2025-08-29 14:42:52.858  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:42:52.860  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:42:52.860  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@40dea674
+2025-08-29 14:42:52.862  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@13c49d85 - Field level information: 
+	com.mysql.cj.result.Field@2e1f61d9[dbName=null,tableName=null,originalTableName=null,columnName=COUNT(*),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:42:52.863  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:42:52.863  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.863  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:42:52.864  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getInt(COUNT(*)) returned 4
+2025-08-29 14:42:52.864  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.864  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:42:52.864  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:42:52.866  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6b0da989
+2025-08-29 14:42:52.866  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:42:52.866  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:42:52.867  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.868  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:42:52.869  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.869  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.869  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:42:52.869  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:42:52.869  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.prepareStatement(SELECT
+            board_id,
+            title,
+            writer,
+            created_at
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%') 
+        ORDER BY board_id DESC
+        LIMIT ? OFFSET ?) returned net.sf.log4jdbc.PreparedStatementSpy@35e9e227
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setString(1, "제목 1") returned 
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setString(2, "제목 1") returned 
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setInt(3, 10) returned 
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.setInt(4, 0) returned 
+2025-08-29 14:42:52.870  INFO 19512 --- [http-nio-8082-exec-1] j.sqlonly                                : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '제목 
+1', '%') OR content LIKE CONCAT('%', '제목 1', '%') ORDER BY board_id DESC LIMIT 10 OFFSET 0 
+
+2025-08-29 14:42:52.871  INFO 19512 --- [http-nio-8082-exec-1] j.sqltiming                              : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '제목 
+1', '%') OR content LIKE CONCAT('%', '제목 1', '%') ORDER BY board_id DESC LIMIT 10 OFFSET 0 
+ {executed in 1 msec}
+2025-08-29 14:42:52.871  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:42:52.871  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:42:52.871  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@57fe04a0
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@1af5316a - Field level information: 
+	com.mysql.cj.result.Field@64666d7e[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=board_id,originalColumnName=board_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@28c9a1b3[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@fb57b0e[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=writer,originalColumnName=writer,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@3cf875f3[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=created_at,originalColumnName=created_at,mysqlType=7(FIELD_TYPE_TIMESTAMP),sqlType=93,flags= BINARY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getLong(board_id) returned 13
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 12
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:15.0
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.872  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getLong(board_id) returned 12
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 11
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:14.0
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getLong(board_id) returned 11
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 10
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:13.0
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getLong(board_id) returned 2
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 1
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:08.0
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:42:52.873  INFO 19512 --- [http-nio-8082-exec-1] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@55e2daf3
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:42:52.874  INFO 19512 --- [http-nio-8082-exec-1] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:43:03.919  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.920  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.920  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:43:03.920  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:43:03.920  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.prepareStatement(SELECT COUNT(*)
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%')) returned net.sf.log4jdbc.PreparedStatementSpy@d7da371
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setString(1, "내용") returned 
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setString(2, "내용") returned 
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.sqlonly                                : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '내용', '%') OR content LIKE CONCAT('%', 
+'내용', '%') 
+
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.sqltiming                              : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '내용', '%') OR content LIKE CONCAT('%', 
+'내용', '%') 
+ {executed in 0 msec}
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@9423606
+2025-08-29 14:43:03.921  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@4c40a94a - Field level information: 
+	com.mysql.cj.result.Field@1dc00c59[dbName=null,tableName=null,originalTableName=null,columnName=COUNT(*),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getInt(COUNT(*)) returned 12
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@65acb903
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:43:03.922  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:43:03.923  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.prepareStatement(SELECT
+            board_id,
+            title,
+            writer,
+            created_at
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%') 
+        ORDER BY board_id DESC
+        LIMIT ? OFFSET ?) returned net.sf.log4jdbc.PreparedStatementSpy@31d03515
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setString(1, "내용") returned 
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setString(2, "내용") returned 
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setInt(3, 5) returned 
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.setInt(4, 5) returned 
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.sqlonly                                : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '내용', 
+'%') OR content LIKE CONCAT('%', '내용', '%') ORDER BY board_id DESC LIMIT 5 OFFSET 5 
+
+2025-08-29 14:43:03.924  INFO 19512 --- [http-nio-8082-exec-2] j.sqltiming                              : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '내용', 
+'%') OR content LIKE CONCAT('%', '내용', '%') ORDER BY board_id DESC LIMIT 5 OFFSET 5 
+ {executed in 0 msec}
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@7e4c7a0e
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@7ea8b065 - Field level information: 
+	com.mysql.cj.result.Field@28210ecb[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=board_id,originalColumnName=board_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@18e9fe47[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@5686b5e[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=writer,originalColumnName=writer,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@3ef8d80e[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=created_at,originalColumnName=created_at,mysqlType=7(FIELD_TYPE_TIMESTAMP),sqlType=93,flags= BINARY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getLong(board_id) returned 8
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 7
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:12.0
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getLong(board_id) returned 7
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 6
+2025-08-29 14:43:03.925  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:11.0
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getLong(board_id) returned 6
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 5
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:11.0
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.927  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getLong(board_id) returned 5
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 4
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:10.0
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getLong(board_id) returned 4
+2025-08-29 14:43:03.928  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(title) returned 페이징 테스트 제목 3
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getString(writer) returned 테스터
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.getTimestamp(created_at) returned 2025-08-29 13:34:09.0
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4943100c
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:43:03.929  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:43:03.930  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:43:03.930  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:43:03.930  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.930  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:03.930  INFO 19512 --- [http-nio-8082-exec-2] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:43:29.813  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.813  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.813  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.prepareStatement(SELECT COUNT(*)
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%')) returned net.sf.log4jdbc.PreparedStatementSpy@5320e050
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setString(1, "결과없음") returned 
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setString(2, "결과없음") returned 
+2025-08-29 14:43:29.814  INFO 19512 --- [http-nio-8082-exec-3] j.sqlonly                                : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '결과없음', '%') OR content LIKE CONCAT('%', 
+'결과없음', '%') 
+
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.sqltiming                              : SELECT COUNT(*) FROM TBL_BOARD WHERE title LIKE CONCAT('%', '결과없음', '%') OR content LIKE CONCAT('%', 
+'결과없음', '%') 
+ {executed in 1 msec}
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@571f6eec
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@121dea6b - Field level information: 
+	com.mysql.cj.result.Field@7733c651[dbName=null,tableName=null,originalTableName=null,columnName=COUNT(*),originalColumnName=null,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= BINARY, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.next() returned true
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.getInt(COUNT(*)) returned 0
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.wasNull() returned false
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@f81e80d
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:43:29.815  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.clearWarnings() returned 
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isValid(0) returned true
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.setAutoCommit(false) returned 
+2025-08-29 14:43:29.816  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getAutoCommit() returned false
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.new PreparedStatement returned 
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.prepareStatement(SELECT
+            board_id,
+            title,
+            writer,
+            created_at
+        FROM TBL_BOARD
+         WHERE title LIKE CONCAT('%', ?, '%')
+                OR content LIKE CONCAT('%', ?, '%') 
+        ORDER BY board_id DESC
+        LIMIT ? OFFSET ?) returned net.sf.log4jdbc.PreparedStatementSpy@1b5a447d
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setString(1, "결과없음") returned 
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setString(2, "결과없음") returned 
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setInt(3, 10) returned 
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.setInt(4, 0) returned 
+2025-08-29 14:43:29.817  INFO 19512 --- [http-nio-8082-exec-3] j.sqlonly                                : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '결과없음', 
+'%') OR content LIKE CONCAT('%', '결과없음', '%') ORDER BY board_id DESC LIMIT 10 OFFSET 0 
+
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.sqltiming                              : SELECT board_id, title, writer, created_at FROM TBL_BOARD WHERE title LIKE CONCAT('%', '결과없음', 
+'%') OR content LIKE CONCAT('%', '결과없음', '%') ORDER BY board_id DESC LIMIT 10 OFFSET 0 
+ {executed in 1 msec}
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.execute() returned true
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.new ResultSet returned 
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@14446433
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.getMetaData() returned com.mysql.cj.jdbc.result.ResultSetMetaData@14852736 - Field level information: 
+	com.mysql.cj.result.Field@767c8bb7[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=board_id,originalColumnName=board_id,mysqlType=8(FIELD_TYPE_BIGINT),sqlType=-5,flags= AUTO_INCREMENT PRIMARY_KEY, charsetIndex=63, charsetName=ISO-8859-1]
+	com.mysql.cj.result.Field@3f4c50a9[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=title,originalColumnName=title,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@81ece8f[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=writer,originalColumnName=writer,mysqlType=253(FIELD_TYPE_VARCHAR),sqlType=12,flags=, charsetIndex=45, charsetName=UTF-8]
+	com.mysql.cj.result.Field@359fe42d[dbName=test1,tableName=TBL_BOARD,originalTableName=tbl_board,columnName=created_at,originalColumnName=created_at,mysqlType=7(FIELD_TYPE_TIMESTAMP),sqlType=93,flags= BINARY UNSIGNED, charsetIndex=63, charsetName=ISO-8859-1]
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.getType() returned 1003
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.isClosed() returned false
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.next() returned false
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.resultset                              : 2. ResultSet.close() returned 
+2025-08-29 14:43:29.818  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7ab8354e
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getMoreResults() returned false
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.getUpdateCount() returned -1
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. PreparedStatement.close() returned 
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.commit() returned 
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.setAutoCommit(true) returned 
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.getAutoCommit() returned true
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.isClosed() returned false
+2025-08-29 14:43:29.819  INFO 19512 --- [http-nio-8082-exec-3] j.audit                                  : 2. Connection.clearWarnings() returned 
