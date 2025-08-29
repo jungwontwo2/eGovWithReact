@@ -2,7 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="egovframework.com.mapper.BoardMapper">
 
-    <select id="selectBoardList" resultType="egovframework.com.domain.Board">
+    <resultMap id="boardResultMap" type="egovframework.com.domain.Board">
+        <id property="boardId" column="board_id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="writer" column="writer" />
+        <result property="createdAt" column="created_at" />
+    </resultMap>
+    <select id="selectBoardList" resultType="egovframework.com.cmm.ComDefaultVO" resultMap="boardResultMap">
         SELECT
             board_id,
             title,
@@ -10,9 +17,15 @@
             created_at
         FROM TBL_BOARD
         ORDER BY board_id DESC
+        LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
     </select>
 
-    <select id="selectBoardDetail" parameterType="long" resultType="egovframework.com.domain.Board">
+    <select id="selectBoardListTotCnt" parameterType="egovframework.com.cmm.ComDefaultVO">
+        SELECT COUNT(*)
+        FROM TBL_BOARD
+    </select>
+
+    <select id="selectBoardDetail" parameterType="long" resultType="egovframework.com.domain.Board" resultMap="boardResultMap">
         SELECT
             board_id,
             title,

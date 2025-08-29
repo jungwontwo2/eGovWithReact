@@ -1,5 +1,6 @@
 package egovframework.com.service.impl;
 
+import egovframework.com.cmm.ComDefaultVO;
 import egovframework.com.domain.Board;
 import egovframework.com.mapper.BoardMapper;
 import egovframework.com.service.BoardService;
@@ -15,8 +16,13 @@ public class BoardServiceImpl implements BoardService {
     private BoardMapper boardMapper;
 
     @Override
-    public List<Board> getBoardList() {
-        return boardMapper.selectBoardList();
+    public List<Board> getBoardList(ComDefaultVO vo) {
+        return boardMapper.selectBoardList(vo);
+    }
+
+    @Override
+    public int getBoardListTotCnt(ComDefaultVO vo) {
+        return boardMapper.selectBoardListTotCnt(vo);
     }
 
     @Override

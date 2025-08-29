@@ -31,3 +31,27 @@ Content-Type: application/json
 
 ### 게시글 1건 삭제
 DELETE http://localhost:8082/api/boards/1
+
+### 1. 기본 페이지 조회 (파라미터 없음)
+# pageIndex=1, pageUnit=10 (기본값) 으로 동작해야 함
+# 예상 결과: list에 10개 (13번~4번 게시글), pagination의 totalCount는 12
+GET http://localhost:8082/api/boards
+Accept: application/json
+
+### 2. 2페이지 조회 (기본 페이지 크기)
+# pageIndex=2, pageUnit=10 으로 동작해야 함
+# 예상 결과: list에 나머지 2개 (3번, 2번 게시글)
+GET http://localhost:8082/api/boards?pageIndex=2
+Accept: application/json
+
+### 3. 페이지당 5개씩 보기 (1페이지)
+# pageIndex=1, pageUnit=5 로 동작해야 함
+# 예상 결과: list에 5개 (13번~9번 게시글)
+GET http://localhost:8082/api/boards?pageUnit=5
+Accept: application/json
+
+### 4. 페이지당 5개씩 보기 (3페이지)
+# pageIndex=3, pageUnit=5 로 동작해야 함
+# 예상 결과: list에 마지막 2개 (3번, 2번 게시글)
+GET http://localhost:8082/api/boards?pageIndex=3&pageUnit=5
+Accept: application/json

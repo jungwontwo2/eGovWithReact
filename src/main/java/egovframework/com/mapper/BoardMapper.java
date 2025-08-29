@@ -1,5 +1,6 @@
 package egovframework.com.mapper;
 
+import egovframework.com.cmm.ComDefaultVO;
 import egovframework.com.domain.Board;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -7,7 +8,8 @@ import java.util.List;
 
 @Mapper
 public interface BoardMapper {
-    List<Board> selectBoardList();
+    List<Board> selectBoardList(ComDefaultVO vo);
+    int selectBoardListTotCnt(ComDefaultVO vo);
     Board selectBoardDetail(Long boardId);
     void insertBoard(Board board);
     void updateBoard(Board board);
