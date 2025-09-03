@@ -1,80 +1,98 @@
 package egovframework.com.jwt;
 
+import egovframework.com.cmm.LoginVO;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 import java.io.Serializable;
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.stereotype.Component;
-
-import egovframework.com.cmm.LoginVO;
-import egovframework.com.cmm.service.EgovProperties;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import lombok.extern.slf4j.Slf4j;
-
-//security 관련 제외한 jwt util 클래스
 @Slf4j
 @Component
-public class EgovJwtTokenUtil implements Serializable{
+public class EgovJwtTokenUtil implements Serializable {
 
-	private static final long serialVersionUID = -5180902194184255251L;
-	//public static final long JWT_TOKEN_VALIDITY = 24 * 60 * 60; //하루
-	public static final long JWT_TOKEN_VALIDITY = (long) ((1 * 60 * 60) / 60) * 60; //토큰의 유효시간 설정, 기본 60분
-	
-	public static final String SECRET_KEY = EgovProperties.getProperty("Globals.jwt.secret");
-	
-	//retrieve username from jwt token
+    private static final long serialVersionUID = -5180902194184255251L;
+    public static final long JWT_TOKEN_VALIDITY = (long) ((1 * 60 * 60) / 60) * 60; // 유효시간 60분
+
+    // 1. globals.properties에서 문자열 비밀키를 읽어옵니다.
+    @Value("${Globals.jwt.secret}")
+    private String secretString;
+
+    // 2. 암호화/복호화에 실제로 사용될 Key 객체를 선언합니다.
+    private Key key;
+
+    // 3. @PostConstruct: 의존성 주입이 완료된 후, 서버가 시작될 때 딱 한 번 실행되는 초기화 메소드입니다.
+    @PostConstruct
+    public void init() {
+        // 읽어온 문자열 비밀키(secretString)를 UTF-8 바이트 배열로 변환한 뒤,
+        // HMAC-SHA 알고리즘에 맞는 안전한 Key 객체로 생성하여 key 필드에 저장합니다.
+        // 이 과정을 통해 WeakKeyException과 Base64 인코딩 오류를 모두 해결합니다.
+        this.key = Keys.hmacShaKeyFor(secretString.getBytes(StandardCharsets.UTF_8));
+    }
+
+    // 토큰에서 사용자 아이디 추출 (템플릿 기존 방식 유지)
     public String getUserIdFromToken(String token) {
-        Claims claims = getClaimFromToken(token);
+        Claims claims = getAllClaimsFromToken(token);
         return claims.get("id").toString();
     }
+
+    // 토큰에서 사용자 구분(userSe) 추출
     public String getUserSeFromToken(String token) {
-        Claims claims = getClaimFromToken(token);
+        Claims claims = getAllClaimsFromToken(token);
         return claims.get("userSe").toString();
     }
+
+    // (템플릿 기존 메소드들)
     public String getInfoFromToken(String type, String token) {
-        Claims claims = getClaimFromToken(token);
+        Claims claims = getAllClaimsFromToken(token);
         return claims.get(type).toString();
     }
+
     public Claims getClaimFromToken(String token) {
-        final Claims claims = getAllClaimsFromToken(token);
-        return claims;
+        return getAllClaimsFromToken(token);
     }
-	
-    //for retrieveing any information from token we will need the secret key
+
+    // 토큰의 모든 정보를 추출 (해독)
     public Claims getAllClaimsFromToken(String token) {
-    	log.debug("===>>> secret = "+SECRET_KEY);
-        return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+        // 해독할 때도 초기화 시 만들어 둔 안전한 key 객체를 사용합니다.
+        return Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
     }
 
-    //generate token for user
+    // 토큰 생성 진입점
     public String generateToken(LoginVO loginVO) {
-        return doGenerateToken(loginVO, "Authorization");
+        return doGenerateToken(loginVO, loginVO.getId());
     }
 
-	//while creating the token -
-	//1. Define  claims of the token, like Issuer, Expiration, Subject, and the ID
-	//2. Sign the JWT using the HS512 algorithm and secret key.
-	//3. According to JWS Compact Serialization(https://tools.ietf.org/html/draft-ietf-jose-json-web-signature-41#section-3.1)
-	//   compaction of the JWT to a URL-safe string
+    // 실제 토큰 생성 로직
     private String doGenerateToken(LoginVO loginVO, String subject) {
 
         Map<String, Object> claims = new HashMap<>();
-        claims.put("id", loginVO.getId() );
-        claims.put("name", loginVO.getName() );
-        claims.put("userSe", loginVO.getUserSe() );
-        claims.put("orgnztId", loginVO.getOrgnztId() );
-        claims.put("uniqId", loginVO.getUniqId() );
-        claims.put("type", subject);
-        claims.put("groupNm", loginVO.getGroupNm());//권한그룹으로 시프링시큐리티 사용
+        claims.put("id", loginVO.getId());
+        claims.put("name", loginVO.getName());
+        claims.put("role", loginVO.getRole());
 
-    	log.debug("===>>> secret = "+SECRET_KEY);
-        return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
-            .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
-            .signWith(SignatureAlgorithm.HS512, SECRET_KEY).compact();
+        // 불필요한 Base64 인코딩 로직을 모두 제거하고, 깔끔하게 정리합니다.
+        return Jwts.builder()
+                .setClaims(claims)
+                .setSubject(subject)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+                // 서명할 때도 초기화 시 만들어 둔 안전한 key 객체를 사용합니다.
+                .signWith(key, SignatureAlgorithm.HS512)
+                .compact();
     }
-
-
 }

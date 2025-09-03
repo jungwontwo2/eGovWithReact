@@ -26,6 +26,8 @@ public class AuthServiceImpl implements AuthService {
             throw new IllegalArgumentException("잘못된 비밀번호입니다.");
         }
 
-        return jwtTokenProvider.generateToken(member);
+        String s = jwtTokenProvider.generateToken(member);
+        System.out.println(s);
+        return s;
     }
 }

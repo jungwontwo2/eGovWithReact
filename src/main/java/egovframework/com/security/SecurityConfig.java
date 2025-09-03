@@ -4,6 +4,7 @@ import egovframework.com.cmm.filter.HTMLTagFilter;
 import egovframework.com.jwt.JwtAuthenticationEntryPoint;
 import egovframework.com.jwt.JwtAuthenticationFilter;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -61,7 +62,7 @@ public class SecurityConfig {
             "/auth/login",//일반 로그인
             "/file", //파일 다운로드
             "/etc/**",//사용자단의 회원약관,회원가입,사용자아이디 중복여부체크 URL허용
-            "/api/boards/**", // <-- 게시판 API 경로 추가
+//            "/api/boards/**", // <-- 게시판 API 경로 추가
             "/api/auth/login",
             /* swagger*/
             "/v3/api-docs/**",
@@ -123,24 +124,27 @@ public class SecurityConfig {
         factory.setMaxFileSize(DataSize.ofMegabytes(100L));
         return factory.createMultipartConfig();
     }
-    
+
     @Bean
-    protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    protected SecurityFilterChain filterChain(HttpSecurity http, JwtAuthenticationFilter jwtAuthenticationFilter) throws Exception {
 
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
-                		.antMatchers("/members/**").hasRole("ADMIN") //ROLE_생략=자동으로 입력됨
+                        .antMatchers("/members/**").hasRole("ADMIN") //ROLE_생략=자동으로 입력됨
                         .antMatchers(AUTH_WHITELIST).permitAll()
                         .antMatchers(HttpMethod.GET,AUTH_GET_WHITELIST).permitAll()
+                        .antMatchers(HttpMethod.GET,"/api/boards/**").permitAll()
+                        .antMatchers("/api/boards/**").authenticated()
                         .anyRequest().authenticated()
                 ).sessionManagement((sessionManagement) ->
-                    sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                        sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                .cors().and()
-                .addFilterBefore(characterEncodingFilter(), ChannelProcessingFilter.class)
-                .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(multipartFilter(), CsrfFilter.class)
+                .cors(cors -> cors.configurationSource(corsConfigurationSource())) // .and() 대신 최신 스타일로 수정
+                // 기존 필터(authenticationTokenFilterBean) 호출은 중복되므로 제거하고, 주입받은 jwtAuthenticationFilter만 사용합니다.
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(characterEncodingFilter(), CsrfFilter.class) // 필터 순서 정리
+                .addFilterBefore(htmlTagFilter(), CsrfFilter.class) // 필터 순서 정리
                 .exceptionHandling(exceptionHandlingConfigurer ->
                         exceptionHandlingConfigurer
                                 .authenticationEntryPoint(new JwtAuthenticationEntryPoint())
