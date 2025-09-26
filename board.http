@@ -93,7 +93,15 @@ Content-Type: application/json
 }
 
 > {%
+    client.log("### 전체 응답 (Full Response Body) ###");
+    client.log(JSON.stringify(response.body, null, 2));
+
+    // 2. 응답에서 토큰을 추출하여 전역 변수에 저장합니다.
     client.global.set("jwt_token", response.body.token);
+
+    // 3. 변수에 저장된 토큰 값을 다시 로그로 출력하여 잘 저장되었는지 확인합니다.
+    client.log("### 저장된 토큰 값 (Saved JWT Token) ###");
+    client.log(client.global.get("jwt_token"));
 %}
 
 
